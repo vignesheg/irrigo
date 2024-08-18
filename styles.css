@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1e1e1e;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative; /* Allow positioning of the sidebar toggle button */
+}
+
+.sidebar {
+    width: 250px;
+    background: #2c2c2c;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-heading {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-content {
+    font-size: 16px;
+}
+
+.info-item {
+    margin-bottom: 10px;
+}
+
+.info-item a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.info-item a:hover {
+    color: #0f0;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative; /* For positioning the sidebar toggle button */
+}
+
+.heading {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+}
+
+.status-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: #333;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.status-circle.on {
+    background: #00ff00;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.9);
+}
+
+.status-circle.off {
+    background: #ff0000;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+}
+
+.status-text {
+    margin: 20px;
+    font-size: 24px;
+}
+
+.toggle-button {
+    background: #333;
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-button:hover {
+    background: #444;
+}
+
+.toggle-button:active {
+    transform: scale(0.98);
+}
+
+.show-sidebar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #444;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.show-sidebar:hover {
+    background: #555;
+}
+
+.sidebar-hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar-visible {
+    transform: translateX(0);
+}

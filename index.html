@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar"><br><br><br>
+            <div class="sidebar-content">
+                <div class="info-item">
+                    <a href="#" id="weather-pressure-link">Pressure</a>
+                </div>
+                <div class="info-item">
+                    <a href="#" id="soil-conditions-link">Soil Conditions</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <button class="show-sidebar" id="show-sidebar">☰</button>
+            <h1 class="heading">Irrigo</h1>
+            <div id="status-circle" class="status-circle off"></div>
+            <div id="status-text" class="status-text">Status: Off</div>
+            <button id="toggle-button" class="toggle-button">Turn On</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
