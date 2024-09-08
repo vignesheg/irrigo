@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuristic UI</title>
+    <title>Set Start and End Time</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar" id="sidebar"><br><br><br>
-            <div class="sidebar-content">
-                <div class="info-item">
-                    <a href="#" id="weather-pressure-link">Pressure</a>
-                </div>
-                <div class="info-item">
-                    <a href="#" id="soil-conditions-link">Soil Conditions</a>
-                </div>
-            </div>
-        </div>
-        <div class="main-content">
-            <button class="show-sidebar" id="show-sidebar">☰</button>
-            <h1 class="heading">Irrigo</h1>
-            <div id="status-circle" class="status-circle off"></div>
-            <div id="status-text" class="status-text">Status: Off</div>
-            <button id="toggle-button" class="toggle-button">Turn On</button>
+    <div class="container"><br><br>
+        <div style="text-align: center;">
+    
+        <p id="status-text"></p></div>
+        <h1>Mode Selector</h1>
+        <button id="mannual">Manual</button>
+        <button id="auto">Automatic</button><br><br>
+        <form id="timeForm">
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="startTime" name="startTime" required>
+            <br><br>
+            <label for="endTime">End Time:</label>
+            <input type="time" id="endTime" name="endTime" required>
+            <br><br>
+            <button type="button" id="start">Start</button>
+            <button type="button" id="stop">Stop</button>
+        </form>
+        <div id="result"></div>
+        <div>
+            <h2>Sensor data</h2>
+            <p id="soilmoist"></p>
+            <p id="temp"></p>
+            <p id="humid"></p>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="module" src="index.js"></script>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
